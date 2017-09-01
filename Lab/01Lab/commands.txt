@@ -1,0 +1,100 @@
+Michael Dresser
+Aparajithan Venkateswaran
+
+
+date		Print or set the system date and time
+ls -ltr		Lists files in current directory reverse ordered by time (oldest first)
+cd ..		Go up by one directory
+pwd		Print current directory
+who		Show who is logged in
+whoami		Current user
+man man		Manual for manual	
+env		Run a program in modified environment
+touch		Create an empty file
+
+
+2.
+	# Make a directoru named cs3308 and move into that directory
+	$ mkdir cs3308
+	$ cd cs3308
+
+	# Rename your directory cs3308 to csci3308
+	$ mv cs3308 csci3308
+
+	# Change to the root directory
+	$ cd ~
+
+	# Make a copy of a file
+	$ cp <file> <file-copy>
+
+	# Delete the copt of your file
+	$ rm <file-copy>
+
+	# Make a directory name tmp. Then delete that directory
+	$ mkdir tmp
+	$ rm -rf tmp	 
+
+	# View the contents of a file
+	$ cat <file>
+
+	# 2nd way to view the contents of a file
+	$ grep "" <file>
+
+	# View just the beginning of a file
+	$ head <file>
+
+	# View just the end of a file
+	$ tail <file>
+
+	# List all files that contain the word 'the' in the file
+	$ grep -iRl "the" /
+
+	# List full path to all files name 'books.txt'
+	$ cd ~
+	$ find / -name "books.txt" -print
+
+	# Tar the contents in your directory into a file named 'dir.tar'
+	$ cd ..
+	$ tar -czvf dir.tar -C <dir> .
+	
+	# Untar the zipped filed dir.tar into a new directory named tmp
+	$ mkdir tmp
+	$ tar xvf dir.tar -C tmp
+
+	# Zip the contents in your directory into a file named 'dir.zip'
+	$ zip -r dir.zip .
+
+	# Unzip the zipped file dir.zip into a new directory named tmp
+	$ unzip dir.zip -d tmp
+
+	# Modify a file's last modifed timestamp to now. This also creates
+	# a new file if it doesn't currently exist
+	$ touch -a -m <file>
+
+
+3. Fancy UNIX commands
+
+	# Sort the file based on the username
+	$ sort passwd.txt
+
+	# Sort the file based on the UID
+	$ sort -t: -k 3 -g passwd.txt
+
+	# Sort first based on GID, then on UID
+	$ sort -t: -k 4,3 -g passwd.txt
+
+	# Show all lines in the file with the word 'Marx' in it
+	$ cat <file> | grep 'Marx'
+
+	# Get the number of lines in the file
+	$ wc -l <file>
+
+	# Print  only the lines in the file with a unique GID
+	$ sort -u -g -t: -k 4,4 passwd.txt
+
+	# Use your command for the previous question and direct the output
+	# into a new file named tmp
+	$ sort -u -g -t: -k 4,4 passwd.txt > tmp
+
+	# Change permissions
+	# chmod a+x <file>

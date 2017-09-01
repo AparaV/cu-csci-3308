@@ -1,0 +1,1 @@
+sort -u -g -t: -k 4,4 passwd.txt
