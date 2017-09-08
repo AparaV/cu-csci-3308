@@ -1,0 +1,23 @@
+1.	$ diff fruitsOld.txt fruitsNew.txt
+
+2.	$ wc -l testPasswd.txt
+	$ wc -m testPasswd.txt
+
+3.	$ cut -d':' -f1 testPasswd.txt
+	$ cut -d' ' -f2,4 grades.txt 
+
+4.	$ cut -d':' -f4 testPasswd.txt | sort -g | uniq > uniqueGID.txt
+	$ grep ^[mws] testPasswd.txt | cut -d':' -f1,6
+
+5.	$ sed 's/[A-Za-z]//g' leetSpeak.txt
+	$ sed 's/[0-9]//g' leetSpeak.txt
+	$ sed 's/[0-9]/_/g' leetSpeak.txt
+
+6.	$ awk -F ' ' '{print $1, $2, ($3+$4+$5+$6+$7)/5*100}' grades.txt
+	$ awk -F ' ' 'NR>1 {sum += $3} END {print sum/7}' grades.txt
+
+7.	$ grep ^[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$ regex_practice_data.txt | wc -l
+	$ grep ^303-441-[0-9][0-9][0-9][0-9]$ regex_practice_data.txt | wc -l 
+	$ grep [A-Za-z0-9\._]*@[A-Za-z0-9\-]*\. regex_practice_data.txt | wc -l
+	$ grep [A-Za-z0-9\._]*@[A-Za-z0-9\-]*\. regex_practice_data.txt | grep .gov$ | wc -l
+	$ grep [A-Za-z0-9\._]*@[A-Za-z0-9\-]*\. regex_practice_data.txt | grep ^[A-Ma-m]*[\.][A-Za-z]*@ | wc -l 
