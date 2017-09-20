@@ -35,7 +35,4 @@ grep ^[AEIOUaeiou].*[0-9]$ $file | wc -l
 grep ^.*@.*\..*$ $file | grep geocities.com$ | wc -l
 
 # Question 8
-total=`grep ^.*@.*\..*$ $file | wc -l`
-valid=`grep ^.*@.*\..*$ $file | grep .[cenoim][oderni][mutgtl]$ | wc -l`
-invalid=$(($total-$valid))
-echo $invalid
+grep @ $file | grep -v '^.*@.*\.[cenoigm][oderni][mtuvgl]$' | wc -l
