@@ -1,0 +1,32 @@
+Part 1
+Aparajithan Venkateswaran
+Jared Cantilina
+======
+
+1. Change the background attribute for #div1 to change the background color of div1
+
+2. Changing the margin changes the area outside the border.
+   Changing the padding changes the area inside the border.
+
+3. If the margin is greater than 100px, then the <p> element goes outside the box. And the color is no longer visible.
+   If the padding is greater than 100px, then the <p> element goes outside the box and the color is still visible.
+
+4. If the overflow is hidden, then the items that go outside the border become hidden.
+   If the overflow is scroll, then the entire thing can be seen by scrolling through the box.
+
+5. Float left - puts everything in the same row  aligned to the left in the order 1, 2, 3.
+   Float right - puts everything in the same row aligned to the right in the order 3, 2, 1.
+
+6. With div1 - box 1 goes to the left and the other two move to the right.
+   With div2 - box 2 goes to the left and one box down. 1 and 3 are aligned to the right vertically.
+   With div3 - box 3 goes to the left and one box down. 1 and 2 are aligned to the right horizontally.
+
+7. .div {
+	float: left;
+   }
+   #div3 {
+    clear: left;
+   }
+
+8. Everything moves to the left sticking to the margin of the browser.
+   This means that the original margin value was greater than 0px.

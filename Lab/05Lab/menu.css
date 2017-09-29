@@ -1,0 +1,64 @@
+/* Stylesheet for menu.html */
+/* Aparajithan Venkateswaran
+   Jared Cantilina */
+
+/* Change 1 */
+body{
+	background: #FDD43B;
+}
+
+p {
+	padding: 0px 0px 0px 0px;
+}
+
+/* Change 2 */
+a:hover {
+	color: #ffffff;
+}
+
+.menu-list {
+	width: 20%;
+	border: solid red;
+	float: left;
+	position: fixed;
+	font-family: cursive; /* Change 3 */
+}
+
+.menu-item {
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px 10px 10px 10px;
+	border: solid green;
+	border-radius: 5px; /* Change 4 */
+}
+
+.menu-info {
+	width: 20%;
+	margin-left: 21%;
+	padding-left: 10px;
+	float: left;
+	border: solid red;
+}
+
+.info-item {
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px 10px 10px 10px;
+	border: 10px double blue;
+	border-radius: 10px; /* Change 4 */
+	text-align: justify; /* Change 5 */
+}
+
+/* The ULTIMATE Change */
+.spl-msg {
+	width: 60%;
+	margin-left: 40%;
+	float: right;
+	text-align: center;
+	position: fixed;
+	font-family: monospace;
+	font-size: 4em;
+	text-shadow: 20px 20px #ff0000;
+}
