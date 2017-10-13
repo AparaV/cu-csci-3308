@@ -1,0 +1,39 @@
+Snippet 1
+=========
+
+1. Bad variable names - needs to be descriptive
+2. Hard coded variable paths
+3. No documentation
+4. No mechanism for handling errors in paths
+
+Snippet 2
+=========
+
+1. self.path is not declared
+2. Run code in main function
+3. Inefficient code.
+4. Could use more documentation. I still don't know what this code is supposed to do.
+5. Times a bunch of if statements. What should this actually time?
+6. Multiple variables are declared on the same line
+7. File is opened but never closed.
+
+Snippet 3
+=========
+
+1. Hard coded variables
+2. More documentation
+3. Handle errors
+
+Snippet 4
+=========
+
+1. Could use more documentation
+2. Handle errors
+
+
+Peer Review
+===========
+
+1. Paths can be encoded as variables for code maintainability and readability
+2. Check for errors when pulling data or moving data and store these in a log file
+3. Has potentially destructive operations (rm -rf)
