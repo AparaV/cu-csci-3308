@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 09</title>
+		<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+
+		<script>
+			// Sample
+			var text = '{"players": [ \
+			 				{"name": "DeMarcus Ware", "jersey": 94}, \
+			 				{"name": "Peyton Manning", "jersey": 18}, \
+			 				{"name": "Von Miller", "jersey": 58} \
+						]}';
+			var team = JSON.parse(text);
+			console.log(team.players[0].name, team.players[0].jersey);
+			console.log(team.players[1].name, team.players[0].jersey);
+			console.log(team.players[2].name, team.players[0].jersey);
+
+			// Weather
+			$(document).ready(function() {
+				var url = 'https://api.forecast.io/forecast/9a88eacea38fe5789edcc1687a9921d7/40.014984,-105.270546';
+				$.ajax({url:url, dataType:"jsonp"}).then(function(data) {
+				   console.log(data);
+				   $("#summary").text(data.currently.summary);
+				   $("#temp").text(data.currently.temperature);
+				   $("#humidity").text(data.currently.humidity);
+			   });
+		   });
+		 </script>
+	</head>
+	<body>
+		<h1>What's the weather?</h1>
+		<p><b>Summary</b></p><p id="summary"></p><br>
+		<p><b>Temperature</b></p><p id="temp"></p><br>
+		<p><b>Humidity</b></p><p id="humidity"></p><br>
+	</body>
+</html>
