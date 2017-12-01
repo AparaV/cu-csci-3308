@@ -1,0 +1,28 @@
+Part 1
+
+Code breaks at line 89.
+No memory allocated to pt.
+
+break <function_name>
+print <variable_name>
+delete <breakpoint_number> (use info b to display all brakpointst
+)
+
+Part 2
+
+Memory lost = 31,999,984 bytes
+Where? Line 41 and 91
+We forgot to deallocate memory
+
+Part 3
+
+7 million iterations
+zeroDist = 50.36
+<cycle 1> = 28.16
+malloc = 18.16
+free = 27.0.7
+_int_free = 20.03
+dist = 18.27
+pow = 13.54
+
+rand = 12.72%
